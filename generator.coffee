@@ -61,22 +61,21 @@ css = """
 .palette-asbestos {
   background-color: #7f8c8d;
 }
-.palette-clouds {
-  color: #bdc3c7;
-}
 """
 
 h_template = """
-- (UIColor *)_name_Color;
++ (UIColor *)flat_name_Color;
 
 """
 
 m_template = """
-- (UIColor *)_name_Color {
-  return [UIColor colorWithRed:_red_ green:_green_ blue:_blue_];
++ (UIColor *)flat_name_Color {
+  return [UIColor colorWithRed:_red_ green:_green_ blue:_blue_ alpha:1.0];
 }
 
 """
+
+colors_array_template = "[UIColor flat_name_Color],"
 
 css_definitions = css.replace(/(\r\n|\n|\r)/gm,"").split "}"
 
@@ -92,10 +91,7 @@ for color_definition in css_definitions
       objc_components = []
       for name_component in name_components
         do () ->
-          if i != 0
-            objc_components.push name_component.charAt(0).toUpperCase() + name_component.slice(1)
-          else
-            objc_components.push name_component
+          objc_components.push name_component.charAt(0).toUpperCase() + name_component.slice(1)
           i++
 
       color_string = components[components.length - 1].replace /#/, ''
@@ -136,3 +132,7 @@ for data in colors_data
       .replace(/_red_/, data.red)
       .replace(/_green_/, data.green)
       .replace(/_blue_/, data.blue)
+
+for data in colors_data
+  do () ->
+    console.log  colors_array_template.replace(/_name_/, data.name)
