@@ -1,0 +1,14 @@
+PODS:
+  - UIColor+FlatColors (0.0.1)
+
+DEPENDENCIES:
+  - UIColor+FlatColors (from `../`)
+
+EXTERNAL SOURCES:
+  UIColor+FlatColors:
+    :path: ../
+
+SPEC CHECKSUMS:
+  UIColor+FlatColors: 7349460520450374e119d19d88d6fb0e3f3ca7f3
+
+COCOAPODS: 0.31.1
