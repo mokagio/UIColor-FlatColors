@@ -1,5 +1,6 @@
 
 #import "ColorsTableViewController.h"
+#import "BigColorTableViewCell.h"
 #import <UIColor+FlatColors.h>
 
 @interface ColorsTableViewController ()
@@ -14,26 +15,26 @@
     if (!self) { return nil; }
 
     self.colors = @[
-                    [UIColor flatTurquoiseColor],
-                    [UIColor flatGreenSeaColor],
-                    [UIColor flatEmeraldColor],
-                    [UIColor flatNephritisColor],
-                    [UIColor flatPeterRiverColor],
-                    [UIColor flatBelizeHoleColor],
-                    [UIColor flatAmethystColor],
-                    [UIColor flatWisteriaColor],
-                    [UIColor flatWetAsphaltColor],
-                    [UIColor flatMidnightBlueColor],
-                    [UIColor flatSunFlowerColor],
-                    [UIColor flatOrangeColor],
-                    [UIColor flatCarrotColor],
-                    [UIColor flatPumpkinColor],
-                    [UIColor flatAlizarinColor],
-                    [UIColor flatPomegranateColor],
-                    [UIColor flatCloudsColor],
-                    [UIColor flatSilverColor],
-                    [UIColor flatConcreteColor],
-                    [UIColor flatAsbestosColor],
+                    @"Turquoise",
+                    @"Green Sea",
+                    @"Emerald",
+                    @"Nephritis",
+                    @"Peter River",
+                    @"Belize Hole",
+                    @"Amethyst",
+                    @"Wisteria",
+                    @"Wet Asphalt",
+                    @"Midnight Blue",
+                    @"Sun Flower",
+                    @"Orange",
+                    @"Carrot",
+                    @"Pumpkin",
+                    @"Alizarin",
+                    @"Pomegranate",
+                    @"Clouds",
+                    @"Silver",
+                    @"Concrete",
+                    @"Asbestos",
                     ];
 
     return self;
@@ -60,20 +61,37 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"CellIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BigColorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+        cell = [[BigColorTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:CellIdentifier];
     }
 
-    cell.backgroundColor = self.colors[indexPath.row];
+    NSString *name = self.colors[indexPath.row];
+    [cell setColorName:name];
+    [cell setColor:[self colorForName:name]];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 72;
 }
 
 #pragma mark - Status bar
 
 - (BOOL)prefersStatusBarHidden { return YES; }
+
+#pragma mark - 
+
+- (UIColor *)colorForName:(NSString *)name
+{
+    NSString *sanitizedName = [name stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *selectorString = [NSString stringWithFormat:@"flat%@Color", sanitizedName];
+    Class colorClass = [UIColor class];
+    return [colorClass performSelector:NSSelectorFromString(selectorString)];
+}
 
 @end
