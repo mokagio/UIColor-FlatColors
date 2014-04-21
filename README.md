@@ -5,6 +5,8 @@ UIColor+FlatColors
 
 That's it.
 
+<img src="https://raw.githubusercontent.com/mokagio/UIColor-FlatColors/master/screenshot.png" />
+
 I suggest you take a look at [FlatUIKit](https://github.com/Grouper/FlatUIKit) if you are looking for the full components of the Flat UI framework to use in your app.
 
 ## Installation with CocoaPods
