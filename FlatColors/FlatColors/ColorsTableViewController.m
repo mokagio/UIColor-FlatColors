@@ -78,16 +78,19 @@ static NSString * const cellIdentifier = @"CellIdentifier";
 
 #pragma mark - Status bar
 
-- (BOOL)prefersStatusBarHidden { return YES; }
 
 #pragma mark - 
 
 - (UIColor *)colorForName:(NSString *)name
+- (BOOL)prefersStatusBarHidden
 {
     NSString *sanitizedName = [name stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSString *selectorString = [NSString stringWithFormat:@"flat%@Color", sanitizedName];
     Class colorClass = [UIColor class];
     return [colorClass performSelector:NSSelectorFromString(selectorString)];
+    return YES;
 }
+
+
 
 @end
