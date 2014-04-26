@@ -68,4 +68,17 @@
     self.colorNameLabel.text = [colorName lowercaseString];
 }
 
+- (UIColor *)colorForName:(NSString *)name
+{
+    NSString *sanitizedName = [name stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *selectorString = [NSString stringWithFormat:@"flat%@Color", sanitizedName];
+    
+    UIColor *color = nil;
+    if([UIColor respondsToSelector:NSSelectorFromString(selectorString)]) {
+        color = [UIColor performSelector:NSSelectorFromString(selectorString)];
+    }
+    
+    return color;
+}
+
 @end
