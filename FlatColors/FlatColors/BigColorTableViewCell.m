@@ -28,13 +28,13 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (!self) { return nil; }
-
-    self.colorNameLabel = [[UILabel alloc] init];
-    self.colorNameLabel.font = [UIFont systemFontOfSize:18];
-    self.colorNameLabel.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:self.colorNameLabel];
-
+    if (self) {
+        self.colorNameLabel = [[UILabel alloc] init];
+        self.colorNameLabel.font = [UIFont systemFontOfSize:18];
+        self.colorNameLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.colorNameLabel];
+    }
+    
     return self;
 }
 
