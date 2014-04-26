@@ -3,5 +3,5 @@
 
 @interface BigColorTableViewCell : UITableViewCell
 - (void)setColorName:(NSString *)colorName;
-- (void)setColor:(UIColor *)color;
+- (void)setBackgroundColorForColorName:(NSString *)colorName;
 @end

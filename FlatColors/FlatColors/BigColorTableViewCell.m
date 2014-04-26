@@ -51,8 +51,9 @@
 
 #pragma mark - 
 
-- (void)setColor:(UIColor *)color
+- (void)setBackgroundColorForColorName:(NSString *)colorName
 {
+    UIColor *color = [self colorForName:colorName];
     self.backgroundColor = color;
 
     // side-effect

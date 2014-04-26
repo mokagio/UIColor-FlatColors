@@ -66,7 +66,7 @@ static NSString * const cellIdentifier = @"CellIdentifier";
 
     NSString *name = self.colors[indexPath.row];
     [cell setColorName:name];
-    [cell setColor:[self colorForName:name]];
+    [cell setBackgroundColorForColorName:name];
     
     return cell;
 }
