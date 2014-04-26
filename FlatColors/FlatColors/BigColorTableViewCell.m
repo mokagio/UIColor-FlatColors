@@ -28,13 +28,13 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (!self) { return nil; }
-
-    self.colorNameLabel = [[UILabel alloc] init];
-    self.colorNameLabel.font = [UIFont systemFontOfSize:18];
-    self.colorNameLabel.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:self.colorNameLabel];
-
+    if (self) {
+        self.colorNameLabel = [[UILabel alloc] init];
+        self.colorNameLabel.font = [UIFont systemFontOfSize:18];
+        self.colorNameLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.colorNameLabel];
+    }
+    
     return self;
 }
 
@@ -43,16 +43,14 @@
     [super layoutSubviews];
 
     CGFloat height = self.frame.size.height;
-    self.colorNameLabel.frame = CGRectMake(0,
-                                           self.frame.size.height - height,
-                                           self.frame.size.width,
-                                           height);
+    self.colorNameLabel.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
 }
 
 #pragma mark - 
 
-- (void)setColor:(UIColor *)color
+- (void)setBackgroundColorForColorName:(NSString *)colorName
 {
+    UIColor *color = [self colorForName:colorName];
     self.backgroundColor = color;
 
     // side-effect
@@ -66,6 +64,19 @@
 - (void)setColorName:(NSString *)colorName
 {
     self.colorNameLabel.text = [colorName lowercaseString];
+}
+
+- (UIColor *)colorForName:(NSString *)name
+{
+    NSString *sanitizedName = [name stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString *selectorString = [NSString stringWithFormat:@"flat%@Color", sanitizedName];
+    
+    UIColor *color = nil;
+    if([UIColor respondsToSelector:NSSelectorFromString(selectorString)]) {
+        color = [UIColor performSelector:NSSelectorFromString(selectorString)];
+    }
+    
+    return color;
 }
 
 @end

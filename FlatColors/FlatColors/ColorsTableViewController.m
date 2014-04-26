@@ -9,41 +9,43 @@
 
 @implementation ColorsTableViewController
 
-- (id)init
+static NSString * const cellIdentifier = @"CellIdentifier";
+
+- (NSArray *)colors
 {
-    self = [super initWithStyle:UITableViewStylePlain];
-    if (!self) { return nil; }
-
-    self.colors = @[
-                    @"Turquoise",
-                    @"Green Sea",
-                    @"Emerald",
-                    @"Nephritis",
-                    @"Peter River",
-                    @"Belize Hole",
-                    @"Amethyst",
-                    @"Wisteria",
-                    @"Wet Asphalt",
-                    @"Midnight Blue",
-                    @"Sun Flower",
-                    @"Orange",
-                    @"Carrot",
-                    @"Pumpkin",
-                    @"Alizarin",
-                    @"Pomegranate",
-                    @"Clouds",
-                    @"Silver",
-                    @"Concrete",
-                    @"Asbestos",
-                    ];
-
-    return self;
+    if(!_colors) {
+        _colors = @[
+                   @"Turquoise",
+                   @"Green Sea",
+                   @"Emerald",
+                   @"Nephritis",
+                   @"Peter River",
+                   @"Belize Hole",
+                   @"Amethyst",
+                   @"Wisteria",
+                   @"Wet Asphalt",
+                   @"Midnight Blue",
+                   @"Sun Flower",
+                   @"Orange",
+                   @"Carrot",
+                   @"Pumpkin",
+                   @"Alizarin",
+                   @"Pomegranate",
+                   @"Clouds",
+                   @"Silver",
+                   @"Concrete",
+                   @"Asbestos",
+                   ];
+    }
+    
+    return _colors;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.tableView registerClass:[BigColorTableViewCell class] forCellReuseIdentifier:cellIdentifier];
 }
 
 #pragma mark - Table view data source
@@ -60,17 +62,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CellIdentifier";
-    BigColorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (!cell) {
-        cell = [[BigColorTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:CellIdentifier];
-    }
+    BigColorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 
     NSString *name = self.colors[indexPath.row];
     [cell setColorName:name];
-    [cell setColor:[self colorForName:name]];
+    [cell setBackgroundColorForColorName:name];
     
     return cell;
 }
@@ -82,16 +78,11 @@
 
 #pragma mark - Status bar
 
-- (BOOL)prefersStatusBarHidden { return YES; }
-
-#pragma mark - 
-
-- (UIColor *)colorForName:(NSString *)name
+- (BOOL)prefersStatusBarHidden
 {
-    NSString *sanitizedName = [name stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSString *selectorString = [NSString stringWithFormat:@"flat%@Color", sanitizedName];
-    Class colorClass = [UIColor class];
-    return [colorClass performSelector:NSSelectorFromString(selectorString)];
+    return YES;
 }
+
+
 
 @end
