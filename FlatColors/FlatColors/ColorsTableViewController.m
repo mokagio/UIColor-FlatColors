@@ -9,35 +9,34 @@
 
 @implementation ColorsTableViewController
 
-- (id)init
+- (NSArray *)colors
 {
-    self = [super initWithStyle:UITableViewStylePlain];
-    if (!self) { return nil; }
-
-    self.colors = @[
-                    @"Turquoise",
-                    @"Green Sea",
-                    @"Emerald",
-                    @"Nephritis",
-                    @"Peter River",
-                    @"Belize Hole",
-                    @"Amethyst",
-                    @"Wisteria",
-                    @"Wet Asphalt",
-                    @"Midnight Blue",
-                    @"Sun Flower",
-                    @"Orange",
-                    @"Carrot",
-                    @"Pumpkin",
-                    @"Alizarin",
-                    @"Pomegranate",
-                    @"Clouds",
-                    @"Silver",
-                    @"Concrete",
-                    @"Asbestos",
-                    ];
-
-    return self;
+    if(!_colors) {
+        _colors = @[
+                   @"Turquoise",
+                   @"Green Sea",
+                   @"Emerald",
+                   @"Nephritis",
+                   @"Peter River",
+                   @"Belize Hole",
+                   @"Amethyst",
+                   @"Wisteria",
+                   @"Wet Asphalt",
+                   @"Midnight Blue",
+                   @"Sun Flower",
+                   @"Orange",
+                   @"Carrot",
+                   @"Pumpkin",
+                   @"Alizarin",
+                   @"Pomegranate",
+                   @"Clouds",
+                   @"Silver",
+                   @"Concrete",
+                   @"Asbestos",
+                   ];
+    }
+    
+    return _colors;
 }
 
 - (void)viewDidLoad
