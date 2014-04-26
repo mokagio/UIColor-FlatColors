@@ -9,6 +9,8 @@
 
 @implementation ColorsTableViewController
 
+static NSString * const cellIdentifier = @"CellIdentifier";
+
 - (NSArray *)colors
 {
     if(!_colors) {
@@ -60,7 +62,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CellIdentifier";
     BigColorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 
     NSString *name = self.colors[indexPath.row];
