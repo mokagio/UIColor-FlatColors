@@ -43,10 +43,7 @@
     [super layoutSubviews];
 
     CGFloat height = self.frame.size.height;
-    self.colorNameLabel.frame = CGRectMake(0,
-                                           self.frame.size.height - height,
-                                           self.frame.size.width,
-                                           height);
+    self.colorNameLabel.frame = CGRectMake(0, self.frame.size.height - height, self.frame.size.width, height);
 }
 
 #pragma mark - 
