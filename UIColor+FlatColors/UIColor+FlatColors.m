@@ -1,8 +1,8 @@
-
 #import "UIColor+FlatColors.h"
 
 @implementation UIColor (FlatColors)
 
+// See http://blog.alexedge.co.uk/speeding-up-uicolor-categories/
 #define AGEColorImplement(COLOR_NAME,RED,GREEN,BLUE)    \
 + (UIColor *)COLOR_NAME{    \
     static UIColor* COLOR_NAME##_color;    \
