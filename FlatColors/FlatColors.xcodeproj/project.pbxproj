@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,7 +21,7 @@
 		3FE30F6118EF51F500921FE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FE30F5F18EF51F500921FE1 /* InfoPlist.strings */; };
 		3FE30F6318EF51F500921FE1 /* FlatColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE30F6218EF51F500921FE1 /* FlatColorsTests.m */; };
 		3FE30F7118EF55FD00921FE1 /* ColorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE30F7018EF55FD00921FE1 /* ColorsTableViewController.m */; };
-		F7BE64E8A9C24CA68A4A0503 /* libPods-FlatColors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD4D2E180BF408892612C9B /* libPods-FlatColors.a */; };
+		D597D78258FA972D40437E85 /* libPods-FlatColors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F791C1DAFDE5C0CB25DCCDFF /* libPods-FlatColors.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BD4D2E180BF408892612C9B /* libPods-FlatColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlatColors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDB2D9018FC82750051C511 /* BigColorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigColorTableViewCell.h; sourceTree = "<group>"; };
 		3FDB2D9118FC82750051C511 /* BigColorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigColorTableViewCell.m; sourceTree = "<group>"; };
 		3FE30F3A18EF51F500921FE1 /* FlatColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,7 +55,9 @@
 		3FE30F6218EF51F500921FE1 /* FlatColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlatColorsTests.m; sourceTree = "<group>"; };
 		3FE30F6F18EF55FD00921FE1 /* ColorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorsTableViewController.h; sourceTree = "<group>"; };
 		3FE30F7018EF55FD00921FE1 /* ColorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorsTableViewController.m; sourceTree = "<group>"; };
-		65C511E597C245628146E8FD /* Pods-FlatColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatColors.xcconfig"; path = "Pods/Pods-FlatColors.xcconfig"; sourceTree = "<group>"; };
+		4916E0381A0D88ED134AE8D4 /* Pods-FlatColors.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatColors.release.xcconfig"; path = "Target Support Files/Pods-FlatColors/Pods-FlatColors.release.xcconfig"; sourceTree = "<group>"; };
+		6899A6539C04AF384613C73D /* Pods-FlatColors.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlatColors.debug.xcconfig"; path = "Target Support Files/Pods-FlatColors/Pods-FlatColors.debug.xcconfig"; sourceTree = "<group>"; };
+		F791C1DAFDE5C0CB25DCCDFF /* libPods-FlatColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlatColors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +68,7 @@
 				3FE30F4018EF51F500921FE1 /* CoreGraphics.framework in Frameworks */,
 				3FE30F4218EF51F500921FE1 /* UIKit.framework in Frameworks */,
 				3FE30F3E18EF51F500921FE1 /* Foundation.framework in Frameworks */,
-				F7BE64E8A9C24CA68A4A0503 /* libPods-FlatColors.a in Frameworks */,
+				D597D78258FA972D40437E85 /* libPods-FlatColors.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +92,7 @@
 				3FE30F5C18EF51F500921FE1 /* FlatColorsTests */,
 				3FE30F3C18EF51F500921FE1 /* Frameworks */,
 				3FE30F3B18EF51F500921FE1 /* Products */,
-				65C511E597C245628146E8FD /* Pods-FlatColors.xcconfig */,
+				D38775F5F93D67DB9B2B0ED0 /* Pods */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -114,7 +115,7 @@
 				3FE30F3F18EF51F500921FE1 /* CoreGraphics.framework */,
 				3FE30F4118EF51F500921FE1 /* UIKit.framework */,
 				3FE30F5618EF51F500921FE1 /* XCTest.framework */,
-				1BD4D2E180BF408892612C9B /* libPods-FlatColors.a */,
+				F791C1DAFDE5C0CB25DCCDFF /* libPods-FlatColors.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,6 +164,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D38775F5F93D67DB9B2B0ED0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6899A6539C04AF384613C73D /* Pods-FlatColors.debug.xcconfig */,
+				4916E0381A0D88ED134AE8D4 /* Pods-FlatColors.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,11 +180,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FE30F6618EF51F500921FE1 /* Build configuration list for PBXNativeTarget "FlatColors" */;
 			buildPhases = (
-				07AC5088DE7040678BC8197F /* Check Pods Manifest.lock */,
+				1E1E07C32CFDD1F9C72763FA /* [CP] Check Pods Manifest.lock */,
 				3FE30F3618EF51F500921FE1 /* Sources */,
 				3FE30F3718EF51F500921FE1 /* Frameworks */,
 				3FE30F3818EF51F500921FE1 /* Resources */,
-				BF57B9CFCE8B4EECBCCD6F03 /* Copy Pods Resources */,
 				0F5B07A78393495AAE7EE1C5 /* Warn for TODO and FIXME comments */,
 			);
 			buildRules = (
@@ -210,7 +219,8 @@
 		3FE30F3218EF51F500921FE1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = mokagio;
 				TargetAttributes = {
 					3FE30F5418EF51F500921FE1 = {
@@ -223,6 +233,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 3FE30F3118EF51F500921FE1;
@@ -257,21 +268,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		07AC5088DE7040678BC8197F /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		0F5B07A78393495AAE7EE1C5 /* Warn for TODO and FIXME comments */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,19 +282,26 @@
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
 		};
-		BF57B9CFCE8B4EECBCCD6F03 /* Copy Pods Resources */ = {
+		1E1E07C32CFDD1F9C72763FA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "Copy Pods Resources";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlatColors-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-FlatColors-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -357,24 +360,40 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -397,7 +416,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
@@ -409,24 +428,39 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
@@ -443,7 +477,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,13 +487,14 @@
 		};
 		3FE30F6718EF51F500921FE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65C511E597C245628146E8FD /* Pods-FlatColors.xcconfig */;
+			baseConfigurationReference = 6899A6539C04AF384613C73D /* Pods-FlatColors.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatColors/FlatColors-Prefix.pch";
 				INFOPLIST_FILE = "FlatColors/FlatColors-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mokagio.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -467,13 +502,14 @@
 		};
 		3FE30F6818EF51F500921FE1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65C511E597C245628146E8FD /* Pods-FlatColors.xcconfig */;
+			baseConfigurationReference = 4916E0381A0D88ED134AE8D4 /* Pods-FlatColors.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatColors/FlatColors-Prefix.pch";
 				INFOPLIST_FILE = "FlatColors/FlatColors-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mokagio.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -495,6 +531,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "FlatColorsTests/FlatColorsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mokagio.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -513,6 +550,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatColors/FlatColors-Prefix.pch";
 				INFOPLIST_FILE = "FlatColorsTests/FlatColorsTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mokagio.ios.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

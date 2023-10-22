@@ -1,6 +1,5 @@
-
 platform :ios
 
-target :FlatColors do  
+target :FlatColors do
   pod 'UIColor+FlatColors', :path => '../'
 end

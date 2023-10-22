@@ -1,14 +1,16 @@
 PODS:
-  - UIColor+FlatColors (0.0.1)
+  - "UIColor+FlatColors (1.0.0)"
 
 DEPENDENCIES:
-  - UIColor+FlatColors (from `../`)
+  - "UIColor+FlatColors (from `../`)"
 
 EXTERNAL SOURCES:
-  UIColor+FlatColors:
-    :path: ../
+  "UIColor+FlatColors":
+    :path: "../"
 
 SPEC CHECKSUMS:
-  UIColor+FlatColors: 417fbe0894c1da0e7ab6505e1409a26052caa75f
+  "UIColor+FlatColors": 23b11d9273fb0fdec2d2fa3b3a2e1bee5f5bfd6a
 
-COCOAPODS: 0.32.1
+PODFILE CHECKSUM: 6a778f6a67895ca087ef16841d71c98a210f56ab
+
+COCOAPODS: 1.12.1

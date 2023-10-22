@@ -1,4 +1,4 @@
-version = "0.0.2";
+version = "1.0.0";
 
 Pod::Spec.new do |s|
   s.name         = "UIColor+FlatColors"
@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
   s.author       = { "Gio" => "giovanni.lodi42@gmail.com" }
   s.social_media_url   = "http://twitter.com/mokagio"
   s.platform     = :ios
+  s.ios.deployment_target = '12.0'
   s.requires_arc = true
   s.source       = { :git => "https://github.com/mokagio/UIColor-FlatColors.git", :tag => "#{version}" }
   s.source_files = "UIColor+FlatColors"
